@@ -360,7 +360,7 @@ namespace ClientApplication
                         .UseConnectionLogging()
                         .Build();
 
-            await using var connection = await client.ConnectAsync(new NamedPipeEndPoint("docker_engine"));
+            await using var connection = await client.ConnectAsync(new Bedrock.Framework.NamedPipeEndPoint("docker_engine"));
 
             // Use the HTTP/1.1 protocol
             var httpProtocol = new HttpClientProtocol(connection);
